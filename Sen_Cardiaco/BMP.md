@@ -32,7 +32,7 @@ El LED verde ilumina el tejido y parte de esa luz se refleja hacia el fotosensor
 
 La siguiente gráfica resume el ciclo eléctrico del corazón (ECG) y su relación con la actividad mecánica de aurículas y ventrículos:
 
-![Ciclo cardíaco y tipos de pulso](images/ciclo_cardiaco.png)
+![Ciclo cardíaco y tipos de pulso](latidos.png)
 
 ### Ondas e intervalos del ECG
 

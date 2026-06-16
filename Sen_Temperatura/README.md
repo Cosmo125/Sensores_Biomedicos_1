@@ -8,6 +8,8 @@ El **LM35** es un sensor de temperatura de **circuito integrado** fabricado orig
 
 A diferencia de un termistor o un termopar, el LM35 **no requiere fórmulas complicadas ni tablas de conversión**: basta con leer el voltaje de salida y aplicar una simple regla de tres para obtener la temperatura.
 
+![Sensor LM35](images.png)
+
 ## 2. Especificaciones técnicas
 
 | Parámetro | Valor |

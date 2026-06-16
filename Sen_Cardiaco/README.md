@@ -3,6 +3,8 @@
 
 Este proyecto utiliza el módulo **HW-827** para medir y graficar la frecuencia cardíaca en tiempo real. A continuación se describe el funcionamiento del sensor, el ciclo cardíaco que da origen a la señal y los distintos tipos de pulso que el sistema busca identificar.
 
+![Sensor hw-827](Pulse-Sensor-Pinout.webp)
+
 ## 1. ¿Qué es el sensor HW-827?
 
 El **HW-827** es un módulo sensor de pulso óptico (también conocido como *Pulse Sensor Amped*), pensado para usarse de forma **plug-and-play** con Arduino, ESP32, Raspberry Pi o cualquier microcontrolador con entrada analógica (ADC).

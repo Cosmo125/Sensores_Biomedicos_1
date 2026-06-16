@@ -43,9 +43,9 @@ El prototipo integra tres elementos principales de hardware, cada uno documentad
 
 | Componente | Función en el proyecto | Documentación |
 |---|---|---|
-| **Sensor de pulso cardíaco HW-827** | Mide la frecuencia cardíaca mediante fotopletismografía (PPG) y permite clasificar el ritmo (normal, rápido, lento, irregular) | [`docs/sensor-hw827.md`](docs/sensor-hw827.md) |
-| **Sensor de temperatura LM35** | Mide la temperatura corporal/ambiental con salida analógica lineal (10 mV/°C) | [`docs/lm35-temperatura.md`](docs/lm35-temperatura.md) |
-| **Pantalla OLED 128×32 (SSD1306)** | Muestra en tiempo real el BPM, la curva de pulso y el estado del ritmo cardíaco detectado | [`docs/oled-display.md`](docs/oled-display.md) |
+| **Sensor de pulso cardíaco HW-827** | Mide la frecuencia cardíaca mediante fotopletismografía (PPG) y permite clasificar el ritmo (normal, rápido, lento, irregular) | [`Sen_Cardiaco/README.md`](Sen_Cardiaco/README.md) |
+| **Sensor de temperatura LM35** | Mide la temperatura corporal/ambiental con salida analógica lineal (10 mV/°C) | [`Sen_Temperatura/README.md`](Sen_Temperatura/README.md) |
+| **Pantalla OLED 128×32 (SSD1306)** | Muestra en tiempo real el BPM, la curva de pulso y el estado del ritmo cardíaco detectado | [`OLED/README.md`](OLED/README.md) |
 
 Todo el sistema se controla con una **placa de desarrollo Arduino**, que lee ambos sensores de forma analógica y envía la información procesada a la pantalla OLED por I2C.
 
@@ -67,15 +67,19 @@ Todo el sistema se controla con una **placa de desarrollo Arduino**, que lee amb
 
 ```
 .
-├── README.md                  ← este archivo (introducción al proyecto)
-├── docs/
-│   ├── sensor-hw827.md        ← sensor de pulso cardíaco
-│   ├── lm35-temperatura.md    ← sensor de temperatura
-│   └── oled-display.md        ← pantalla OLED + conversión de imágenes con image2cpp
-├── images/
-│   └── ciclo_cardiaco.png     ← referencia gráfica del ciclo cardíaco (ECG)
-└── src/
-    └── ...                    ← código fuente del proyecto (Arduino/ESP32)
+├── README.md                          ← este archivo (introducción al proyecto)
+├── LICENSE                            ← licencia del repositorio
+├── Sen_Cardiaco/
+│   ├── README.md                      ← sensor de pulso cardíaco HW-827
+│   └── latidos.png                    ← referencia gráfica del ciclo cardíaco (ECG)
+├── Sen_Temperatura/
+│   └── README.md                      ← sensor de temperatura LM35
+├── OLED/
+│   ├── README.md                      ← pantalla OLED + conversión de imágenes con image2cpp
+│   ├── EMBS.ino                       ← sketch de la pantalla para el proyecto del taller
+│   └── Grafica.ino                    ← sketch para graficar la señal de pulso en la OLED
+└── Proyecto/
+    └── Ejemplo_1_Pan_Sen.ino          ← ejemplo de integración de sensores
 ```
 
 ## Responsables de la actividad
@@ -85,7 +89,7 @@ Todo el sistema se controla con una **placa de desarrollo Arduino**, que lee amb
 
 ## Cómo empezar
 
-1. Revisa la documentación de cada componente en la carpeta [`docs/`](docs) para entender cómo funciona cada sensor.
+1. Revisa la documentación de cada componente: [`Sen_Cardiaco/README.md`](Sen_Cardiaco/README.md), [`Sen_Temperatura/README.md`](Sen_Temperatura/README.md) y [`OLED/README.md`](OLED/README.md), para entender cómo funciona cada sensor.
 2. Sigue la estructura de 5 días para avanzar de los fundamentos de Arduino hasta el prototipo integrado.
-3. Usa la herramienta [image2cpp](https://javl.github.io/image2cpp/) (explicada en `docs/oled-display.md`) si quieres personalizar íconos o gráficos para la pantalla OLED.
-4. Sube tu propio código y avances dentro de la carpeta `src/` siguiendo el flujo de trabajo del taller.
+3. Usa la herramienta [image2cpp](https://javl.github.io/image2cpp/) (explicada en `OLED/README.md`) si quieres personalizar íconos o gráficos para la pantalla OLED.
+4. Revisa la carpeta [`Proyecto/`](Proyecto) para ver un ejemplo de integración de ambos sensores (`Ejemplo_1_Pan_Sen.ino`) como punto de partida para tu propio prototipo.
